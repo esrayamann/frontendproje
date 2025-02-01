@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Rights</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i data-lucide="heart"></i>
+                <span>Children's Rights</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#rights">Rights</a>
+                <a href="#education">Education</a>
+                <a href="#protection">Protection</a>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#rights">Rights</a>
+            <a href="#education">Education</a>
+            <a href="#protection">Protection</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Every Child Has Rights</h1>
+                <p>Protecting and promoting the rights of every child for a better future</p>
+            </div>
+            <div class="hero-image">
+                <img 
+                    src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=80"
+                    alt="Children playing together"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section id="rights" class="rights">
+        <div class="container">
+            <h2>Fundamental Rights</h2>
+            <div class="rights-grid">
+                <div class="right-card">
+                    <div class="icon-circle blue">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3>Right to Life</h3>
+                    <p>Every child has the inherent right to life, survival, and development.</p>
+                </div>
+                <div class="right-card">
+                    <div class="icon-circle green">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <h3>Right to Education</h3>
+                    <p>All children deserve access to quality education and learning opportunities.</p>
+                </div>
+                <div class="right-card">
+                    <div class="icon-circle purple">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <h3>Right to Protection</h3>
+                    <p>Children must be protected from violence, abuse, and exploitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <div class="education-grid">
+                <div class="education-content">
+                    <h2>Education for All</h2>
+                    <p>Every child has the right to quality education that helps them develop their talents and abilities.
+                        Education should teach children about their rights and prepare them for life.</p>
+                    <ul class="education-list">
+                        <li>
+                            <i data-lucide="book"></i>
+                            <span>Free primary education</span>
+                        </li>
+                        <li>
+                            <i data-lucide="users"></i>
+                            <span>Equal access to education</span>
+                        </li>
+                        <li>
+                            <i data-lucide="heart"></i>
+                            <span>Safe learning environment</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="education-image">
+                    <img 
+                        src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80"
+                        alt="Children in classroom"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="protection" class="protection">
+        <div class="container">
+            <h2>Protection & Safety</h2>
+            <div class="protection-grid">
+                <div class="protection-card">
+                    <h3>Safe Environment</h3>
+                    <p>Children have the right to grow up in a safe and supportive environment.</p>
+                </div>
+                <div class="protection-card">
+                    <h3>Health Care</h3>
+                    <p>Access to quality healthcare and medical treatment when needed.</p>
+                </div>
+                <div class="protection-card">
+                    <h3>Freedom from Abuse</h3>
+                    <p>Protection from all forms of violence, abuse, and exploitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i data-lucide="heart"></i>
+                    <span>Children's Rights</span>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 Children's Rights Initiative. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            
+            const menuBtn = document.querySelector('.mobile-menu-btn i');
+            if (menu.classList.contains('active')) {
+                menuBtn.setAttribute('data-lucide', 'x');
+            } else {
+                menuBtn.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('active');
+                document.querySelector('.mobile-menu-btn i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
